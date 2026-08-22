@@ -18,31 +18,114 @@
     <style>
       :root {
         color-scheme: light dark;
-        --bg: #f6f6f5;
-        --fg: #1c1e21;
-        --muted: #5f646d;
-        --border: #d2d2cf;
+        --bg: #ffe4e1; --fg: #000000; --muted: #75585a; --accent: #6d071a; --surface: #f9d3ce; --border: #e4b8b2;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #1c1e21;
-          --fg: #e8e6e3;
-          --muted: #9aa0a6;
-          --border: #3c4043;
+          --bg: #010005; --fg: #ffffff; --muted: #b39fa4; --accent: #e37f98; --surface: #150f14; --border: #3d3138;
         }
       }
+
       html { margin: 0; padding: 0; }
       body {
-        margin: 0 auto;
+        margin: 0;
         padding: 1.5rem 1rem 3rem;
-        max-width: 38rem;
         background: var(--bg);
         color: var(--fg);
-        font-family: system-ui, sans-serif;
-        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.6;
       }
-      h1 { line-height: 1.3; }
-      a { color: inherit; }
+      h1 { margin: 0 0 1rem; font-size: 2rem; line-height: 1.3; }
+      a { color: var(--accent); }
+      a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+      /* ── Chrome band — the family convention (retours 2026-08-22):
+         the app's fluid grid (one square = a tenth of the viewport's
+         short side), the logo at the ICON footprint (square/1.6) in a
+         piece-size tile — a doorway to the apex, no fill in any state —
+         and Sanki's own Play button at the right, declaration for
+         declaration on the chrome tokens: piece-size tall, piece-margin
+         border in the page ground at rest, radius square/8, padding
+         square/4, label at square/2.4, sword at square/1.6. */
+      @media (orientation: landscape) {
+        :root { --chrome-content: 100vh; }
+      }
+      @media (orientation: portrait) {
+        :root { --chrome-content: 100vw; }
+      }
+      :root {
+        --chrome-square: calc(var(--chrome-content) / 10);
+        --chrome-piece: calc(var(--chrome-square) * 0.85);
+        --chrome-margin: calc((var(--chrome-square) - var(--chrome-piece)) / 2);
+      }
+      body > header {
+        display: block;
+        padding-top: var(--chrome-square);
+      }
+      body > header > nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: var(--chrome-square);
+        display: flex;
+        align-items: center;
+        margin: 0;
+        z-index: 100;
+      }
+      body > header > nav a {
+        display: grid;
+        place-items: center;
+        width: var(--chrome-piece);
+        height: var(--chrome-piece);
+        margin: var(--chrome-margin);
+      }
+      body > header > nav img {
+        display: block;
+        width: calc(var(--chrome-square) / 1.6);
+        height: calc(var(--chrome-square) / 1.6);
+        max-width: none;
+        max-height: none;
+        margin: 0;
+      }
+      body > header > a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--chrome-square) / 8);
+        box-sizing: border-box;
+        height: var(--chrome-piece);
+        margin: var(--chrome-margin);
+        padding-inline: calc(var(--chrome-square) / 4);
+        border: var(--chrome-margin) solid var(--bg);
+        border-radius: calc(var(--chrome-square) / 8);
+        background: var(--accent);
+        color: var(--bg);
+        font-size: calc(var(--chrome-square) / 2.4);
+        font-weight: 600;
+        white-space: nowrap;
+        text-decoration: none;
+        z-index: 100;
+        transition: border-color 0.25s;
+      }
+      body > header > a > svg {
+        width: calc(var(--chrome-square) / 1.6);
+        height: calc(var(--chrome-square) / 1.6);
+        flex: none;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      body > header > a:hover,
+      body > header > a:active,
+      body > header > a:focus-visible {
+        border-color: var(--border);
+      }
+
       .muted { color: var(--muted); }
       figure { margin: 2rem 0; }
       figure img {
@@ -51,35 +134,60 @@
         height: auto;
         background: #fff;
         border: 1px solid var(--border);
+        border-radius: 0.5rem;
       }
       pre {
         padding: .75rem 1rem;
+        background: var(--surface);
         border: 1px solid var(--border);
+        border-radius: 0.5rem;
         overflow-x: auto;
         font-size: .85rem;
       }
-      ul.puzzles { list-style: none; padding: 0; }
+      ul.puzzles { list-style: none; margin: 0; padding: 0; }
       ul.puzzles li { border-bottom: 1px solid var(--border); }
       ul.puzzles a { display: block; padding: .5rem 0; text-decoration: none; }
       ul.puzzles a:hover { text-decoration: underline; }
-      nav.pager { display: flex; justify-content: space-between; margin-top: 2rem; }
-      footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
+      /* The pager holds only the links that exist — no placeholder
+         element: a lone "newer" link pushes itself to the right edge. */
+      nav.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+      nav.pager > a[rel="next"] { margin-inline-start: auto; }
+      footer {
+        margin-top: 3rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+        font-size: .85rem;
+        color: var(--muted);
+      }
+      @media print {
+        body > header > a { display: none; }
+      }
     </style>
   </head>
   <body>
-    <p><a href="/">← 一覧へ戻る</a></p>
-    <h1>出題 — 2026年8月21日</h1>
-    <p>詰め王棋、3手詰。</p>
-    <figure>
-      <img src="diagram.webp" alt="詰め王棋の図面 — FEEN: 3ik^&#39;b2/2+f1+f3/2n5/1N6/8/4I3/8/4K^3 /14f4r3b2n J/j"
-           width="1200" height="1003">
-    </figure>
-    <p class="muted"><a href="https://sashite.dev/specs/feen/1.0.0/">FEEN</a></p>
-    <pre><code>3ik^&#39;b2/2+f1+f3/2n5/1N6/8/4I3/8/4K^3 /14f4r3b2n J/j</code></pre>
-    <nav class="pager">
-      <span></span>
+    <header>
+      <nav>
+        <a href="https://ogi.page/">
+          <img src="/favicon.svg" alt="王棋ロゴ" height="64" width="64">
+        </a>
+      </nav>
+    
+      <a href="https://play.ogi.page/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 19-6-6"/><path d="m5 21-2-2"/><path d="m8 16-4 4"/><path d="M9.5 17.5 21 6V3h-3L6.5 14.5"/></svg>今すぐプレイ</a>
+    </header>
+    <main>
+      <p><a href="/">← 一覧へ戻る</a></p>
+      <h1>出題 — 2026年8月21日</h1>
+      <p>詰め王棋、3手詰。</p>
+      <figure>
+        <img src="diagram.webp" alt="詰め王棋の図面 — FEEN: 3ik^&#39;b2/2+f1+f3/2n5/1N6/8/4I3/8/4K^3 /14f4r3b2n J/j"
+             width="1200" height="1003">
+      </figure>
+      <p class="muted"><a href="https://sashite.dev/specs/feen/1.0.0/">FEEN</a></p>
+      <pre><code>3ik^&#39;b2/2+f1+f3/2n5/1N6/8/4I3/8/4K^3 /14f4r3b2n J/j</code></pre>
+      <nav class="pager">
       <a href="/5b42586be8e54f2df0e8289e6bbba4c4a252c5db4ab6506fedb0952bbcb9f1d2/" rel="next">2026年8月22日 →</a>
     </nav>
+    </main>
     <footer>
       <p><a href="https://bsky.app/profile/tsume.ogi.page" rel="me">Bluesky でフォロー</a> · <a href="https://sashite.com/">Sashité</a></p>
     </footer>
