@@ -171,11 +171,25 @@
         border-color: var(--border);
       }
 
+      /* The reading column — a puzzle is a narrow thing: title, statement,
+         diagram, one line of proof. The cap keeps desktop lines readable
+         and centres the composition; phones never meet it. */
+      main, body > footer {
+        max-width: 44rem;
+        margin-inline: auto;
+      }
+
       .muted { color: var(--muted); }
-      figure { margin: 2rem 0; }
+
+      /* The diagram — the vector, fluid, on its white plate (the renderer
+         draws ink with no ground of its own, so the plate is what keeps
+         the lines legible in the dark scheme too), capped at a size a
+         mate-in-2 deserves rather than the whole viewport. */
+      figure { margin: 2rem auto; text-align: center; }
       figure img {
-        display: block;
+        display: inline-block;
         width: 100%;
+        max-width: 32rem;
         height: auto;
         background: #fff;
         border: 1px solid var(--border);
@@ -201,10 +215,29 @@
       }
       details summary { cursor: pointer; font-weight: 600; }
       details p { margin: .75rem 0 0; }
-      ul.puzzles { list-style: none; margin: 0; padding: 0; }
-      ul.puzzles li { border-bottom: 1px solid var(--border); }
-      ul.puzzles a { display: block; padding: .5rem 0; text-decoration: none; }
-      ul.puzzles a:hover { text-decoration: underline; }
+      /* The calendar — the family's door tiles (the rules sites' language
+         doors, dress for dress): surface, border, a ring that tints on
+         hover and moves nothing. */
+      ul.puzzles {
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: 0.6rem;
+      }
+      ul.puzzles a {
+        display: block;
+        padding: 0.75rem 1.25rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        text-decoration: none;
+        font-size: 1.15rem;
+      }
+      ul.puzzles a:hover,
+      ul.puzzles a:focus-visible {
+        border-color: var(--accent);
+      }
       /* The pager holds only the links that exist — no placeholder
          element: a lone "newer" link pushes itself to the right edge. */
       nav.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
