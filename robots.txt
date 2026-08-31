@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tsume.ogi.page/sitemap.xml
