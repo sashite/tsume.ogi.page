@@ -1,0 +1,1 @@
+var e={OpenChallenge:3418,Pairing:3419,DirectChallenge:3420,AcceptedChallenge:3421,GameSession:3422,Ply:3423,AdjudicationRequest:3424,Adjudication:3425,RematchOffer:3430,Reaction:7,Deletion:5,Report:1984,Attestation:3410,EloRating:3426,GlickoRating:3427,ChallengePolicy:30420,Composition:3440,Validation:3441,Mood:30422};export{e as t};

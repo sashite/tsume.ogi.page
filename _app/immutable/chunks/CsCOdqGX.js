@@ -1,0 +1,1 @@
+var e=[`en`,`fr`,`ja`,`th`,`zh`];function t(t){for(let n of t){let t=n.toLowerCase().split(`-`)[0]??``;if(e.includes(t))return t}return`en`}export{t as n,e as t};

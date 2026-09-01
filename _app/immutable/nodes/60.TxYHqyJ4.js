@@ -1,0 +1,1 @@
+import{n as e}from"../chunks/hePW80VL.js";import"../chunks/CTafDN28.js";import"../chunks/xihTtKlq.js";import{n as t}from"../chunks/Duyo6OLQ.js";import{t as n}from"../chunks/BelWyZaW.js";var r=e({load:()=>i}),i=()=>{t?.surface===`puzzle`&&n(404)};function a(e){}export{a as component,r as universal};

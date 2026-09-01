@@ -1,0 +1,1 @@
+import{t as e}from"./DGwVKEYy.js";var t=[`xiongqi-page`,`chess-page`,`ogi-page`,`puzzle-chess-page`,`tsume-ogi-page`,`shaju-xiongqi-page`];function n(e){return t.includes(e??``)?e:`sanki`}var r=n(e.PUBLIC_APP);function i(e){let t=e?.trim().toLowerCase();return t===`true`||t===`1`}var a=i(e.PUBLIC_PREMIUM);export{a as n,r as t};

@@ -1,0 +1,1 @@
+import{r as e}from"./DybqMdjo2.js";function t(e){return{id:e.id,pubkey:e.pubkey,created_at:e.created_at,kind:e.kind,tags:e.tags,content:e.content,sig:e.sig}}function n(t){return t.map(t=>{if(!t.sig)return!1;try{return e({id:t.id,pubkey:t.pubkey,created_at:t.created_at,kind:t.kind,tags:t.tags,content:t.content,sig:t.sig})}catch{return!1}})}export{n,t};

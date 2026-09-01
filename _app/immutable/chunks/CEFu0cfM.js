@@ -1,0 +1,1 @@
+import{A as e,D as t,H as n,ht as r,q as i,u as a}from"./CTafDN28.js";import"./xihTtKlq.js";var o=e(`<svg viewBox="0 0 24 24" aria-hidden="true"><use></use></svg>`);function s(e,s){var c=o(),l=i(c);r(c),n(()=>a(l,`href`,`#icon-${s.name??``}`)),t(e,c)}export{s as t};

@@ -1,0 +1,1 @@
+import{G as e,V as t,at as n,it as r,lt as i,ut as a,y as o}from"../chunks/CTafDN28.js";import"../chunks/xihTtKlq.js";import{t as s}from"../chunks/D8MdYa1c.js";import{t as c}from"../chunks/cHqFuIGo.js";function l(l,u){a(u,!0);let d=()=>n(s,`$_`,f),[f,p]=r();o(`1x8as2n`,n=>{t(t=>{e.title=`${t??``} — Sanki`},[()=>d()(`hub.timeline_title`)])}),c(l,{}),i(),p()}export{l as component};

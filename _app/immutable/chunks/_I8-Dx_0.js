@@ -1,0 +1,1 @@
+function e(e){return e.trim()===`unsupported`?`out_of_scope`:`disagreement`}export{e as t};

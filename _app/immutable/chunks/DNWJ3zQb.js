@@ -1,0 +1,1 @@
+var e=[{name:`tactical`,icon:`sparkles`},{name:`romantic`,icon:`flame`},{name:`classical`,icon:`tree-pine`},{name:`hypermodern`,icon:`waves`}];function t(t){return e.find(e=>e.name===t)}export{t as n,e as t};

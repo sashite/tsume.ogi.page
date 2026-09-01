@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/favicon.svg" />
+		<!--
+			No-FOUC theme. Three themes — light (default), dark, and system. A saved
+			choice is applied to <html data-theme> before first paint so the page
+			never flashes the wrong scheme; with no saved choice the attribute is
+			absent and the stylesheet follows prefers-color-scheme.
+		-->
+		<script>
+			(function () {
+				// Apply the saved theme (light/dark) to <html data-theme> before first paint
+				// so the page never flashes the wrong scheme. With no saved choice the
+				// attribute stays absent and the stylesheet follows prefers-color-scheme.
+				try {
+					var t = localStorage.getItem('sashite:theme');
+					if (t === 'light' || t === 'dark') {
+						document.documentElement.setAttribute('data-theme', t);
+					}
+				} catch (e) {
+					/* private mode / storage disabled — fall back to system */
+				}
+			})();
+		</script>
+		<!--
+			The text face is now on the critical path of every page: preload its Latin
+			file so the first paint is already Source Sans 3 rather than a swap from the
+			system sans. `crossorigin` is mandatory for font preloads, even same-origin.
+		-->
+		<link
+			rel="preload"
+			href="/fonts/source-sans-3/files/source-sans-3-latin-wght-normal.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<meta http-equiv="content-security-policy" content="default-src 'self'; worker-src 'self'; connect-src 'self' https: wss:; font-src 'self'; img-src 'self' data: https:; manifest-src 'self'; object-src 'none'; script-src 'self' 'unsafe-eval' 'sha256-zC6O9HpKBL0JMJn0rtgkvICpG296pQnIJ++KigRFDPM=' 'sha256-Oa2+Z790w3p8kgv0ox/UhU3+oXYfiiyWCi1KNyov//k='; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self'">
+		<link href="/_app/immutable/entry/start.CB-t_QIb.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Cbb_WjwC.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CTafDN28.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/hePW80VL.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Dt-HX3Vu.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BEmvvGOe.js" rel="modulepreload">
+		<link href="/_app/immutable/entry/app.C1VV3u2-.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/HclGiUj8.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DvngUa99.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="/_app/immutable/nodes/0.Di7Lh3sl.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D8MdYa1c.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BFzUVuQ6.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CsCOdqGX.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DGwVKEYy.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D3Krt8q9.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CC1xfq9f.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BWqIen5J.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DjA3cuv1.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Dq7TRFnd.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/5Fpf1q95.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CXQ4eUpM.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Dd82kKuV.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/sgyxl6BI.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Bhhm3TO-.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/SaY9YMY8.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/C3avNVDh.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BatA_ds3.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Cbd_zXfI.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CsWBdvmu.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CGBZGcSp2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BAGEzfBB2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Bnip4hrF2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BJyeYUvd2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/C40277a82.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/LFKIh9Cg2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D3NZGliU2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BNiF91sO2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DXHBlcfB2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D4ePtETR2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/IXkzYZGn2.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/B-Fo42K6.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/oeeoF34s.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BwDssdDq.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CGirKY5F.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BCka8X2S.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Duyo6OLQ.js" rel="modulepreload">
+		<link href="/_app/env.js" rel="modulepreload">
+		
+		<link href="/_app/immutable/assets/0.CT_2G4yh.css" rel="stylesheet">
+	</head>
+	<!--
+		data-color is the viewer's profile colour, which tints the whole chrome
+		via the --pc-* engine. A neutral default holds until the kind-0 profile
+		resolves and sets the viewer's chosen colour.
+
+		data-app is the build's shell (ADR-0012) — empty for the default Sanki
+		shell — so layout CSS can restyle chrome-level geometry per shell before
+		hydration (the xiongqi-page shell has no chrome strip, so <main> starts at
+		the very top). It is filled by hooks.server.ts from the PARSED `APP`
+		(flags.ts), NOT the raw PUBLIC_APP, so the CSS geometry and the JS shell
+		selection read one normalized source and cannot drift on a malformed value.
+	-->
+	<body data-sveltekit-preload-data="hover" data-color="stone" data-app="tsume-ogi-page">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_e69kqg = {
+						base: "",
+						env: null
+					};
+
+					const element = document.currentScript.parentElement;
+
+					import("/_app/env.js").then(({ env }) => {
+						__sveltekit_e69kqg.env = env;
+
+						Promise.all([
+							import("/_app/immutable/entry/start.CB-t_QIb.js"),
+							import("/_app/immutable/entry/app.C1VV3u2-.js")
+						]).then(([kit, app]) => {
+							kit.start(app, element);
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

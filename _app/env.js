@@ -1,0 +1,1 @@
+export const env={PUBLIC_PUZZLER:"0fc021e96fb55539c9f70cac91403b3356d2000f751e036d3c71733a8ebeea0a",PUBLIC_NOSTR_RELAYS:"",PUBLIC_APP:"tsume-ogi-page"}

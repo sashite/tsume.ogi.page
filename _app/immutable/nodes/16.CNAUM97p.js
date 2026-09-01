@@ -1,0 +1,1 @@
+import{I as e,lt as t,tt as n,ut as r}from"../chunks/CTafDN28.js";import"../chunks/xihTtKlq.js";import{t as i}from"../chunks/Dd82kKuV.js";import{t as a}from"../chunks/4d4EvP_m.js";function o(o,s){r(s,!0);let c=n(()=>i.params.npub??``);a(o,{get npub(){return e(c)},filter:`moods`}),t()}export{o as component};

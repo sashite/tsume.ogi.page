@@ -1,0 +1,1 @@
+import{n as e}from"../chunks/hePW80VL.js";import{t}from"../chunks/D3Krt8q9.js";import{t as n}from"../chunks/BelWyZaW.js";import{t as r}from"../chunks/DfyLCNjw.js";var i=e({load:()=>a}),a=()=>{t!==`sanki`&&n(404,`Not Found`)};export{r as component,i as universal};

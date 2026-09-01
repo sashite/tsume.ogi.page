@@ -1,0 +1,1 @@
+var e=[`spam`,`impersonation`,`profanity`,`illegal`,`other`],t={spam:`mail-warning`,impersonation:`id-card-lanyard`,profanity:`message-circle-warning`,illegal:`scale`,other:`triangle-alert`};function n(e,t,n){let r=[[`p`,e,t]];return n&&r.push([`e`,n,t]),r}export{t as n,n as r,e as t};

@@ -1,0 +1,1 @@
+var e=/^(?:web\+)?nostr:(?:\/\/)?/i;function t(t){return t.trim().replace(e,``)}export{t};

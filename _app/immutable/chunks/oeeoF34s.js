@@ -1,0 +1,1 @@
+var e=(e,t)=>{let n=setTimeout(e,t);return()=>clearTimeout(n)};function t(t){let n=t.timeoutMs??5e3,r=t.schedule??e,i=!1,a;function o(e){i!==e&&(i=e,t.onArmedChange(e))}function s(){a?.(),a=void 0}function c(){s(),o(!1)}function l(){if(i){c(),t.confirm();return}o(!0),s(),a=r(c,n)}return{press:l,disarm:c}}export{t};

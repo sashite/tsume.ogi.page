@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 4096 4096" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<title>Chariot</title>
+<defs><clipPath id="chariot-clip"><circle cx="2048" cy="2048" r="1900"/></clipPath></defs>
+<circle cx="2048" cy="2048" r="1900" fill="#802b09" stroke="#fff4e6" stroke-width="148" stroke-dasharray="296 222"/>
+<g clip-path="url(#chariot-clip)">
+<rect x="1201.4" y="1169.1" width="1693.2" height="161.26" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1435" y="1449" width="1226.1" height="81.061" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1283" y="2644.6" width="1530" height="481.3" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1536.3" y="1514.8" width="1023.4" height="167.19" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1338.7" y="2578.8" width="1418.6" height="101.33" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1513.5" y="2274.8" width="1069" height="222.92" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1457.8" y="2462.2" width="1180.5" height="70.929" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <rect x="1272.8" y="1297" width="1550.3" height="106.39" fill="#fd7e14" stroke-width="0" style="font-variation-settings:'wght' 700;paint-order:markers stroke fill"/>
+  <path d="m2262.8 982.37h265.62v-214.06h428.12v585.94l-346.88 267.19v746.88l265.62 265.62v320.31h239.06v373.44h-2132.8v-373.44h239.06v-320.31l267.19-265.62v-746.88l-346.88-267.19v-585.94h426.56v214.06h267.19v-214.06h428.12zm-932.81 1946.9v159.38h1437.5v-159.38zm718.75-1706.2h-800v71.875l114.06 85.938h1373.4l110.94-85.938v-71.875zm0 264.06h-546.88l93.75 73.438v89.062h906.25v-89.062l93.75-73.438zm0 853.12h-453.12v71.875l-93.75 90.625h1093.8l-93.75-90.625v-71.875zm0 268.75h-646.88l-71.875 67.188v90.625h1437.5v-90.625l-71.875-67.188z" dominant-baseline="central" fill="#ffc078" aria-label="♜"/>
+</g>
+</svg>
